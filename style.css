@@ -1,0 +1,213 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+}
+/* Styling the contents in main tag*/
+main{ 
+    height: 70vh;
+    width:100vw;
+    position: relative;
+    margin:0 auto;
+}
+/* Styling the contents in footer tag*/
+footer{
+    height: 30vh;
+    background-color: white;
+}
+/*Using flex to make partion for div tags inside main tag*/
+.row{
+    display: flex; /* making two section using flex property */
+    justify-content: center; /*Aligning the content to cener*/
+    align-items: center; /* aligning the items inside the div tag to center*/
+    width: 100%;
+    max-width: 1000px; /*for larger display it uses 1000 px and for smaller it uses 100% */
+    position:absolute; /*positioning it to center*/
+    left: 50%;
+    top:50%;
+    transform:translate(-50%, -50%) ;    
+}
+/*Styling image and the content*/
+.col-logo{
+    flex: 0 0 50%; /*width of 50%*/
+    text-align: left;
+}
+/*Styling form and the content*/
+.col-form{
+    flex: 0 0 40%;
+    text-align: center;
+}
+/*Styling image */
+.col-logo img{
+    /* max-width: 300px; */
+    width: 300px;
+}
+/*Styling content below image*/
+.col-logo h2{
+    font: 20px;
+    font-height: 400px;
+    padding: 0 30px;
+    line: height 52px;
+}
+/*Styling form*/
+.col-form .form-container{
+    background-color: white;
+    border-radius:8px ;
+    border: none;
+    box-shadow: 0 2px rgba(0,0,0,0.1), 0 8px 16px rgba(0,0,0,0.1) ;
+    margin: 20px;
+    padding: 20px;
+    max-width: 400px; 
+    
+}
+/*Styling input tags and login button*/
+.col-form .form-container input, .col-form .form-container btn-login{
+    width: 100%;
+    margin: 5px 0;
+    height: 45px;
+    vertical-align: middle;
+    font-size: 16px;
+}  
+.col-form .form-container input{
+    border: 1px solid #dddfe2;
+    color: #1d2129;
+    padding: 0 8px;
+    outline: none;
+    border-radius: 5px;
+} 
+/*Stylings-When we click on ths input field(wen focus is on paricular ip field) */
+.col-form .form-container input :focus{
+    border-color: #1877f2;
+    box-shadow: 0 0 0 2px #e7f3ff;
+}
+/*Styling login button */
+.col-form .form-container .btn-login{
+    background-color: #1877f2;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    padding: 0 16px;
+    color: #ffffff;
+    font-weight: 700; 
+} 
+.col-form .form-container a{
+    display: block;
+    color: #1877f2;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 10px 0 20px;
+    border-bottom: 1px solid #dadde1;
+    }
+.col-form .form-container a:hover{
+        text-decoration: underline;
+    }
+.col-form .form-container .btn-new{
+    background-color: #42b72a;
+    border:none;
+    border-radius: 6px;
+    font-size: 17px;
+    line-height: 48px;
+    padding: 0 10px;
+    color: white;
+    font-weight: 700;
+    margin-top: 20px;
+
+} 
+.col-form p{
+    font-size: 14px;
+}
+.col-form p a{
+    text-decoration: none;
+    color: #1c1e21;
+    font-weight: 600;
+}
+.col-form p a:hover{
+    text-decoration: underline;
+}
+.footer-contents{
+    position: relative;
+     max-width: 1000px; 
+    
+    margin: 0 auto;
+}
+footer ol{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 10px 0;
+}
+/*Styling first list of ol*/
+footer ol :first-child{
+    border-bottom:1px solid #dddfe2;  /*bottom gray color*/
+}
+/*Styling both list of ol*/
+footer ol:first-child li:last-child button{
+    background-color: #f5f6f7;
+    border: 1px solid #ccd0d5;
+    outline: none;
+    color: #4b4f56;
+    padding: 0 8px;
+    font-weight: 700;
+    font-size: 16px;
+} 
+/*styling contents in list*/
+footer ol li{
+    padding-right: 15px;
+    font-size: 12px;
+    color: #385898;
+}
+footer ol li a {
+    text-decoration: none;
+    color: #385898;
+} 
+footer ol li a:hover {
+    text-decoration: underline;
+}
+/*Styling the contents inside small in footer*/
+footer small{
+    font-size: 11px;
+}
+
+@media only screen and (min-width:324px) and (max-width:767px){
+    .col-logo h2{
+        display: none;
+    }
+    .second{
+        display: none;
+    }
+    body{
+    background-color: white;
+    }
+   .row{
+       display: flex;
+       flex-direction: column;
+   }
+   .footer-contents{
+       margin-top: 100px;
+   }
+   .col-form p{
+       display: none;
+   }
+   .col-form .form-container {
+    background-color: white;
+    border-radius: 8px;
+    border: none;
+    box-shadow: none;
+    margin: 20px;
+    padding: 20px;
+    max-width: 400px;
+    margin-top: 0 !important;
+}
+footer {
+    margin: 20px !important;
+}
+  .col-logo img{
+      margin-top: 30px;
+  }  
+
+}
